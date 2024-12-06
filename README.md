@@ -1,8 +1,11 @@
-# React + Vite
+ How It All Works Together
+Step 1: User enters a description in the PromptInput component and clicks "Generate."
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This triggers the generateImage function in the App component.
+Step 2: The app sends the description to the backend server.
 
-Currently, two official plugins are available:
+While waiting for the server to respond, a loading spinner is displayed in ImageDisplay.
+Step 3: The backend returns a URL of the generated image.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This URL is displayed in ImageDisplay.
+Step 4: The gallery is updated with all previously generated images, including the new one.
